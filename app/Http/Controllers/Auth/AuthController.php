@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Exception;
 use Carbon\Carbon;
+
+use App\Models\User;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\RolesController;
+
 
 class AuthController extends Controller
 {
@@ -22,12 +25,14 @@ class AuthController extends Controller
             $request->validate([
                 'name' => 'required|string',
                 'email' => 'required|string|email|unique:users',
-                'password' => 'required|string'
+                'password' => 'required|string',
+                'id' => 'required|integer|exists:roles'
             ]);
     
             User::create([
-                'name' => $request->name,
+                'name'  => $request->name,
                 'email' => $request->email,
+                'rol'   => $request->id,
                 'password' => bcrypt($request->password)
             ]);
     
@@ -46,7 +51,7 @@ class AuthController extends Controller
     /**
      * Inicio de sesión y creación de token
      */
-    public static function login(Request $request)
+    public function login(Request $request)
     {
         try {
             
@@ -64,6 +69,12 @@ class AuthController extends Controller
                 ], 401);
     
             $user = $request->user();
+
+            if(!$this->validateAdminRol($user->role))
+                return response()->json([
+                    'message' => 'Unauthorized'
+                ], 401);
+
             $tokenResult = $user->createToken('Personal Access Token');
     
             $token = $tokenResult->token;
@@ -75,7 +86,7 @@ class AuthController extends Controller
                 'access_token' => $tokenResult->accessToken,
                 'token_type' => 'Bearer',
                 'expires_at' => Carbon::parse($token->expires_at)->toDateTimeString(),
-                'user' => $user
+                'user' => $user,
             ]);
 
         } catch (Exception $e) {
@@ -84,6 +95,35 @@ class AuthController extends Controller
 
         }
         
+    }
+
+    public function validateAdminRol($id)
+    {
+        try {
+            
+            $rol = RolesController::show($id);
+
+            $isValid = false;
+
+            if (isset($rol->original['rol'])){
+
+                $rol_name = $rol->original['rol']->name;
+
+                if($rol_name == 'admin_room_911'){
+
+                    $isValid = true;
+
+                }
+
+            }
+
+            return $isValid;
+            
+        } catch (Exception $e) {
+
+            return returnExceptions($e);
+
+        }
     }
 
     /**

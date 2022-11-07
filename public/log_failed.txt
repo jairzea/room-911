@@ -4,3 +4,193 @@
 message => The name field is required. (and 2 more errors)
 file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
 line => 327
+
+07/11/2022 18:39:24
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 18:40:28
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 18:40:51
+message => The password field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 18:41:01
+message => Undefined property: Laravel\Sanctum\NewAccessToken::$token
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/Auth/AuthController.php
+line => 69
+
+07/11/2022 18:49:41
+message => Undefined property: Laravel\Sanctum\NewAccessToken::$token
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/Auth/AuthController.php
+line => 71
+
+07/11/2022 19:02:32
+message => The email has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 20:41:27
+message => The email has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 20:54:34
+message => The name field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 20:55:57
+message => The selected name is invalid.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 20:59:37
+message => Add [name] to fillable property to allow mass assignment on [App\Models\Roles].
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php
+line => 523
+
+07/11/2022 21:15:58
+message => Call to undefined method Illuminate\Database\Eloquent\Builder::createToken()
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php
+line => 71
+
+07/11/2022 21:27:25
+message => The name field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 21:28:00
+message => No se encontró el rol
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/RolesController.php
+line => 72
+
+07/11/2022 21:39:31
+message => Undefined variable $progress
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/Auth/AuthController.php
+line => 106
+
+07/11/2022 21:40:12
+message => No existe el rol
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/RolesController.php
+line => 72
+
+07/11/2022 21:43:01
+message => No existe el rol
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/RolesController.php
+line => 72
+
+07/11/2022 21:45:52
+message => Attempt to read property "role" on null
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/Auth/AuthController.php
+line => 68
+
+07/11/2022 22:03:25
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 22:03:38
+message => The last name field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 22:03:48
+message => The identification field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 22:04:00
+message => Add [name] to fillable property to allow mass assignment on [App\Models\Employee].
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php
+line => 523
+
+07/11/2022 22:04:18
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list' (SQL: insert into `employees` (`name`, `description`, `identification`, `updated_at`, `created_at`) values (Nuevo empleado, ?, 123456-1667779200, 2022-11-07 22:04:18, 2022-11-07 22:04:18))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+07/11/2022 22:05:45
+message => The last name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 22:13:05
+message => No existe el empleado con id: 2 para ser actualizado
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 105
+
+07/11/2022 22:13:47
+message => The name field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 22:14:17
+message => No existe el empleado con id: 2 para ser actualizado
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 112
+
+07/11/2022 22:14:21
+message => Undefined variable $dataUpdate
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 115
+
+07/11/2022 22:20:45
+message => Undefined variable $request
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 21
+
+07/11/2022 22:21:28
+message => The name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 22:22:26
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123456-1667779200' for key 'employees_code_unique' (SQL: insert into `employees` (`name`, `last_name`, `identification`, `updated_at`, `created_at`) values (Nuevo empleado, Apellido, 123456-1667779200, 2022-11-07 22:22:26, 2022-11-07 22:22:26))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+07/11/2022 22:24:27
+message => The last name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+07/11/2022 22:26:50
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123456-1667779200' for key 'employees_code_unique' (SQL: insert into `employees` (`name`, `last_name`, `identification`, `updated_at`, `created_at`) values (Nuevo empleado, Apellido, 123456-1667779200, 2022-11-07 22:26:50, 2022-11-07 22:26:50))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+07/11/2022 22:27:01
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123456-1667779200' for key 'employees_code_unique' (SQL: insert into `employees` (`name`, `last_name`, `identification`, `updated_at`, `created_at`) values (Nuevo empleado, Apellido, 123456-1667779200, 2022-11-07 22:27:01, 2022-11-07 22:27:01))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+07/11/2022 22:27:02
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123456-1667779200' for key 'employees_code_unique' (SQL: insert into `employees` (`name`, `last_name`, `identification`, `updated_at`, `created_at`) values (Nuevo empleado, Apellido, 123456-1667779200, 2022-11-07 22:27:02, 2022-11-07 22:27:02))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+07/11/2022 22:27:49
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123456-1667779200' for key 'employees_code_unique' (SQL: insert into `employees` (`name`, `last_name`, `identification`, `updated_at`, `created_at`) values (Nuevo empleado, Apellido, 123456-1667779200, 2022-11-07 22:27:49, 2022-11-07 22:27:49))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+07/11/2022 22:28:09
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123456-1667779200' for key 'employees_code_unique' (SQL: insert into `employees` (`name`, `last_name`, `identification`, `updated_at`, `created_at`) values (Nuevo empleado, Apellido, 123456-1667779200, 2022-11-07 22:28:09, 2022-11-07 22:28:09))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+07/11/2022 22:28:16
+message => Ya existe el empleado con el id interno
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 75
+
+07/11/2022 22:28:52
+message => The last name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327

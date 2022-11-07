@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DepartmentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +52,13 @@ Route::group(['prefix' => env('API_VERSION')], function ()
         Route::post('/employees',[EmployeeController::class, 'store']);
         Route::put('/employees/{id}',[EmployeeController::class, 'update']);
         Route::get('/employees',[EmployeeController::class, 'index']);
+
+        // ---------------------------------------------------------------------
+        // employees
+        // ---------------------------------------------------------------------
+        Route::post('/departments',[DepartmentController::class, 'store']);
+        Route::put('/departments/{id}',[DepartmentController::class, 'update']);
+        Route::get('/departments',[DepartmentController::class, 'index']);
         
     });
 });

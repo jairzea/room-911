@@ -81,16 +81,6 @@ class RolesController extends Controller
         }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -101,7 +91,32 @@ class RolesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+
+            $validated = $request->validate([
+                'name' => 'required|string',
+                'description' => 'string'
+            ]);
+
+            $rol = Roles::find($id);
+
+            $dataUpdate = [
+                "name" => $request->input("name"), "description" => $request->input("description")
+            ];
+
+            if (empty($rol))
+                throw new Exception("No existe el rol con id: " . $id . " para ser actualizado");
+
+            $rol->update($dataUpdate);
+            $message = "Rol actualizado con éxto";
+            
+            return response()->json(["message" => $message], 200);
+
+        } catch (Exception $e) {
+
+            return returnExceptions($e);
+
+        }
     }
 
     /**

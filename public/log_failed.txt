@@ -1,0 +1,6 @@
+
+
+07/11/2022 18:37:56
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327

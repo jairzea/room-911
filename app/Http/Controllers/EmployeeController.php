@@ -44,16 +44,6 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -78,7 +68,7 @@ class EmployeeController extends Controller
                 throw new Exception("Ya existe el empleado con el id interno");
 
             $data = [
-                "name" => $request->input("name"), "last_name" => $request->input("last_name"), "identification" => $identification, "department_id" => $request->input("id"),
+                "name" => $request->input("name"), "last_name" => $request->input("last_name"), "identification" => $identification, "department_id" => $request->input("id"), "state" => 1
             ];
 
             $create = Employee::create($data);
@@ -104,17 +94,6 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -134,7 +113,8 @@ class EmployeeController extends Controller
             $employe = Employee::find($id);
 
             $dataUpdate = [
-                "name" => $request->input("name"), "last_name" => $request->input("last_name"), "department_id" => $request->input("id"),
+                "name" => $request->input("name"), "last_name" => $request->input("last_name"), 
+                "department_id" => $request->input("id")
             ];
 
             if (empty($employe))
@@ -151,23 +131,16 @@ class EmployeeController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
     public function bulkUploadUsers(Request $request)
     {
 
         try {
+
+            $validated = $request->validate([
+                'id' =>  'required|integer|exists:departments'
+            ]);
             
-            Excel::import(new EmployeesImport(), $request->file);
+            Excel::import(new EmployeesImport($request->id), $request->file);
 
             return response()->json(["message" => "Empleados cargados correctamente"], 200);
 
@@ -177,5 +150,29 @@ class EmployeeController extends Controller
 
         }
          
+    }
+
+    public function changeState(Request $request, $id)
+    {
+        try {
+
+            $validated = $request->validate([
+                'state' => 'required|boolean'
+            ]);
+
+            $search = Employee::find($id);
+            
+            if (empty($search)) {
+                throw new Exception("Ocurrio un error");
+            }
+
+            $search->update(["state" => $request->input("state")]);
+
+            return response()->json(["message" => "Cambio de estado realizado correctamente"], 200);
+            
+            
+        } catch (Exception $e) {
+            return returnExceptions($e);
+        }
     }
 }

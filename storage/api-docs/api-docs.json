@@ -82,6 +82,25 @@
                     }
                 ]
             }
+        },
+        "/api/v1/export/income_record": {
+            "get": {
+                "tags": [
+                    "Exports"
+                ],
+                "summary": "Exportar registro de ingresos de empleados",
+                "operationId": "4885e4803b875a4c97c42b4205d46f82",
+                "responses": {
+                    "200": {
+                        "description": "{Download Income Record}"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer_token": []
+                    }
+                ]
+            }
         }
     },
     "components": {

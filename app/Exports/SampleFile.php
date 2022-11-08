@@ -14,7 +14,6 @@ class SampleFile implements FromArray
         return [[
             'name',
             'last_name', 
-            'department',
             'identification'
         ]];
     }

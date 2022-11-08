@@ -8,6 +8,11 @@ use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 class EmployeesImport implements ToModel, WithHeadingRow
 {
+    public function __construct(string $id)
+    {
+        $this->id = $id;
+    }
+
     /**
     * @param array $row
     *
@@ -18,7 +23,8 @@ class EmployeesImport implements ToModel, WithHeadingRow
         return new Employee([
             'name' => $row['name'],
             'last_name' => $row['last_name'],
-            'department_id' => $row['department'],
+            'department_id' => $this->id,
+            'state' => 1,
             'identification' => $row['identification'] . '-' . strtotime(date('Y-m-d  H:m:s'))
         ]);
     }

@@ -8,6 +8,8 @@ use App\Http\Controllers\RolesController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\ExportController;
+use App\Http\Controllers\IncomeRecordController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,8 @@ use App\Http\Controllers\ExportController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+date_default_timezone_set(env('DEFAULT_TIME_ZONE'));
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -32,6 +36,7 @@ Route::group(['prefix' => env('API_VERSION')], function ()
     // ---------------------------------------------------------------------
     Route::post('/auth/authentication',[AuthController::class, 'login']);
     Route::post('/auth/signup',[AuthController::class, 'signUp']);
+    Route::post('/auth/entry_room_911',[IncomeRecordController::class, 'entryRoom911']);
 
     Route::group(['middleware' => 'auth:api'], function() 
     {   
@@ -53,6 +58,7 @@ Route::group(['prefix' => env('API_VERSION')], function ()
         Route::put('/employees/{id}',[EmployeeController::class, 'update']);
         Route::get('/employees',[EmployeeController::class, 'index']);
         Route::post('/employees/bulk_upload_users',[EmployeeController::class, 'bulkUploadUsers']);
+        Route::patch('/employees/{id}',[EmployeeController::class, 'changeState']);
 
         // ---------------------------------------------------------------------
         // departments
@@ -62,10 +68,15 @@ Route::group(['prefix' => env('API_VERSION')], function ()
         Route::get('/departments',[DepartmentController::class, 'index']);
 
         // ---------------------------------------------------------------------
-        // Export
+        // export
         // --------------------------------------------------------------------- 
-        
         Route::get('/export/sample_file',[ExportController::class, 'exportSampleFile']);
+        Route::get('/export/income_record',[IncomeRecordController::class, 'downloadIncomeRecord']);
+
+        // ---------------------------------------------------------------------
+        // income record
+        // --------------------------------------------------------------------- 
+        Route::get('/income_record/{id}',[IncomeRecordController::class, 'show']);
         
     });
 });

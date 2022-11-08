@@ -7,7 +7,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\DepartmentController;
-
+use App\Http\Controllers\ExportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,13 +52,20 @@ Route::group(['prefix' => env('API_VERSION')], function ()
         Route::post('/employees',[EmployeeController::class, 'store']);
         Route::put('/employees/{id}',[EmployeeController::class, 'update']);
         Route::get('/employees',[EmployeeController::class, 'index']);
+        Route::post('/employees/bulk_upload_users',[EmployeeController::class, 'bulkUploadUsers']);
 
         // ---------------------------------------------------------------------
-        // employees
+        // departments
         // ---------------------------------------------------------------------
         Route::post('/departments',[DepartmentController::class, 'store']);
         Route::put('/departments/{id}',[DepartmentController::class, 'update']);
         Route::get('/departments',[DepartmentController::class, 'index']);
+
+        // ---------------------------------------------------------------------
+        // Export
+        // --------------------------------------------------------------------- 
+        
+        Route::get('/export/sample_file',[ExportController::class, 'exportSampleFile']);
         
     });
 });

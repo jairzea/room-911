@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Exception;
+use Maatwebsite\Excel\Facades\Excel;
 
+use App\Imports\EmployeesImport;
 use App\Models\Employee;
 
 class EmployeeController extends Controller
@@ -165,13 +167,13 @@ class EmployeeController extends Controller
 
         try {
             
-            Excel::import(new UsersImport($request->subcompanies_id), $request->file);
+            Excel::import(new EmployeesImport(), $request->file);
 
-            return response()->json(["message" => "Usuarios cargados correctamente"], 200);
+            return response()->json(["message" => "Empleados cargados correctamente"], 200);
 
         } catch (Exception $e) {
-            
-            return response()->json(["message" => $e->getMessage(), "line" => $e->getLine()], 500);
+
+            return returnExceptions($e);
 
         }
          

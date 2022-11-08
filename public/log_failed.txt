@@ -259,3 +259,53 @@ line => 21
 message => Undefined variable $request
 file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
 line => 21
+
+08/11/2022 00:21:53
+message => No ReaderType or WriterType could be detected. Make sure you either pass a valid extension to the filename or pass an explicit type.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/maatwebsite/excel/src/Helpers/FileTypeDetector.php
+line => 31
+
+08/11/2022 00:31:45
+message => Undefined array key "name"
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Imports/EmployeesImport.php
+line => 19
+
+08/11/2022 00:33:21
+message => Undefined array key "Name"
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Imports/EmployeesImport.php
+line => 19
+
+08/11/2022 00:42:55
+message => Undefined array key "Name"
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Imports/EmployeesImport.php
+line => 19
+
+08/11/2022 00:46:29
+message => Undefined array key "Name"
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Imports/EmployeesImport.php
+line => 19
+
+08/11/2022 00:52:00
+message => Undefined array key "name"
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Imports/EmployeesImport.php
+line => 19
+
+08/11/2022 01:01:44
+message => Undefined array key "last name"
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Imports/EmployeesImport.php
+line => 20
+
+08/11/2022 01:09:56
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Zea' for key 'employees_last_name_unique' (SQL: insert into `employees` (`name`, `last_name`, `department_id`, `identification`, `updated_at`, `created_at`) values (Jair, Zea, 1, 12345678-1667869916, 2022-11-08 01:09:56, 2022-11-08 01:09:56))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+08/11/2022 01:57:38
+message => 
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/maatwebsite/excel/src/Factories/ReaderFactory.php
+line => 81
+
+08/11/2022 01:58:03
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Zea' for key 'employees_last_name_unique' (SQL: insert into `employees` (`name`, `last_name`, `department_id`, `identification`, `updated_at`, `created_at`) values (Jair, Zea, 1, 12345678-1667869863, 2022-11-08 01:58:03, 2022-11-08 01:58:03))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760

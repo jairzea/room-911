@@ -12,7 +12,17 @@ use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\RolesController;
 
-
+/**
+* @OA\Info(title="API's Room 911", version="1.0")
+*
+* @OA\Server(url="http://127.0.0.1:8000")
+*
+* @OAS\SecurityScheme(
+*      securityScheme="bearer_token",
+*      type="http",
+*      scheme="bearer"
+* )
+*/
 class AuthController extends Controller
 {
      /**
@@ -49,8 +59,43 @@ class AuthController extends Controller
     }
 
     /**
-     * Inicio de sesión y creación de token
-     */
+    * @OA\Post(
+    *     path="/api/v1/auth/authentication",
+    *     tags={"Auth"},
+    *     summary="Ingreso de usuarios",
+    *     @OA\Parameter(name="email", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="password", in="query", @OA\Schema(type="password")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "access_token":"Acceso correcto",
+    *                       "token_type":"",
+    *                       "expires_at":"",
+    *                       "user":{}
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function login(Request $request)
     {
         try {

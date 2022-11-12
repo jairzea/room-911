@@ -56,7 +56,7 @@ _Cada vez que realice una migración debera ejecutar el comando anterior_
 
 ## Demo de la aplicacion
 
-https://prueba.protech.net.co
+http://test.asstiseguridadsocial.com/
 
 ## Documentación de la api
 

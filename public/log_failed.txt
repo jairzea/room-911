@@ -239,3 +239,293 @@ line => 28
 message => Method Illuminate\Database\Eloquent\Collection::paginate does not exist.
 file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
 line => 113
+
+11/11/2022 20:14:01
+message => Undefined variable $val
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 49
+
+11/11/2022 20:17:45
+message => Undefined variable $val
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 49
+
+11/11/2022 20:17:59
+message => Undefined variable $val
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 49
+
+11/11/2022 20:18:00
+message => Undefined variable $val
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 49
+
+11/11/2022 20:18:01
+message => Undefined variable $val
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 49
+
+11/11/2022 20:18:02
+message => Undefined variable $val
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 49
+
+11/11/2022 20:21:18
+message => Undefined variable $val
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 49
+
+11/11/2022 20:22:19
+message => No se encontraron registros
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 44
+
+11/11/2022 20:48:00
+message => The name field is required. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 21:10:41
+message => The id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 21:12:05
+message => The id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 21:12:59
+message => The id must be an integer.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 21:14:34
+message => The id must be an integer.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 21:18:10
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Zea' for key 'employees_last_name_unique' (SQL: insert into `employees` (`name`, `last_name`, `department_id`, `state`, `identification`, `updated_at`, `created_at`) values (Jair, Zea, 2, 1, 12345678-1668219070, 2022-11-11 21:18:10, 2022-11-11 21:18:10))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+11/11/2022 21:31:19
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Zea' for key 'employees_last_name_unique' (SQL: insert into `employees` (`name`, `last_name`, `department_id`, `state`, `identification`, `updated_at`, `created_at`) values (Jair, Zea, 1, 1, 12345678-1668219078, 2022-11-11 21:31:18, 2022-11-11 21:31:18))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+11/11/2022 21:33:42
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Zeanuew' for key 'employees_last_name_unique' (SQL: insert into `employees` (`name`, `last_name`, `department_id`, `state`, `identification`, `updated_at`, `created_at`) values (Jair, Zeanuew, 2, 1, 12345678443-1668219102, 2022-11-11 21:33:42, 2022-11-11 21:33:42))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+11/11/2022 21:49:03
+message => 
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/maatwebsite/excel/src/Factories/ReaderFactory.php
+line => 81
+
+11/11/2022 21:53:07
+message => Undefined array key "doc_file"
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 149
+
+11/11/2022 21:53:39
+message => Undefined variable $formatos_permitidos
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 151
+
+11/11/2022 21:59:30
+message => The file must be a file of type: mp3, wav, aac.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:00:37
+message => Method Illuminate\Filesystem\Filesystem::types does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113
+
+11/11/2022 22:02:58
+message => Method Illuminate\Filesystem\Filesystem::types does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113
+
+11/11/2022 22:03:41
+message => The file must be a file of type: csv.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:03:51
+message => The file must be a file of type: csv.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:03:53
+message => The file must be a file of type: csv.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:03:54
+message => The file must be a file of type: csv.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:05:58
+message => The file must be a file of type: csv, txt.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:06:06
+message => The file must be a file of type: csv.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:06:07
+message => The file must be a file of type: csv.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:06:18
+message => The file must be a file of type: csv, txt.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:06:25
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Zeanuew' for key 'employees_last_name_unique' (SQL: insert into `employees` (`name`, `last_name`, `department_id`, `state`, `identification`, `updated_at`, `created_at`) values (Jair, Zeanuew, 2, 1, 12345678443-1668222685, 2022-11-11 22:06:25, 2022-11-11 22:06:25))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+11/11/2022 22:06:50
+message => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'My last name' for key 'employees_last_name_unique' (SQL: insert into `employees` (`name`, `last_name`, `department_id`, `state`, `identification`, `updated_at`, `created_at`) values (My test, My last name, 1, 1, 1238757-1668222710, 2022-11-11 22:06:50, 2022-11-11 22:06:50))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+11/11/2022 22:07:12
+message => The file must be a file of type: csv, txt.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:10:01
+message => The name field is required. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 22:12:58
+message => The file must be a file of type: csv, txt.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:07:13
+message => The identification must be an integer. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:10:06
+message => The name must be a string. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:10:43
+message => The identification must be an integer. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:10:57
+message => The identification must be an integer. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:11:54
+message => The identification must be an integer. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:12:07
+message => The identification must be an integer. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:13:48
+message => The identification must be an integer. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:14:01
+message => The id must be an integer.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:14:34
+message => The id must be an integer.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 23:26:37
+message => The last name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+12/11/2022 00:35:00
+message => The email has already been taken. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+12/11/2022 01:11:19
+message => The id field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+12/11/2022 01:12:13
+message => SQLSTATE[HY000]: General error: 1364 Field 'role' doesn't have a default value (SQL: insert into `users` (`name`, `email`, `password`, `updated_at`, `created_at`) values (Lisneey, lis@mail.com, $2y$10$RtEvk0BsG//LM217z6GPQupzmfAeDf0Qz2V/MC/Vo6bduNKka5ekq, 2022-11-12 01:12:13, 2022-11-12 01:12:13))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+12/11/2022 01:14:38
+message => SQLSTATE[HY000]: General error: 1364 Field 'role' doesn't have a default value (SQL: insert into `users` (`name`, `email`, `password`, `updated_at`, `created_at`) values (Lisneey, lis@mail.com, $2y$10$NJHyvbtakU6qWWW8D3zPX.YL6tmVZrYX93h1q7Fp8NVXvlGYCKhRK, 2022-11-12 01:14:38, 2022-11-12 01:14:38))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+12/11/2022 01:15:28
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rol' in 'field list' (SQL: insert into `users` (`name`, `email`, `rol`, `password`, `updated_at`, `created_at`) values (Lisneey, lis@mail.com, 1, $2y$10$FPXtaOxdMkS2QszZm6YtT.Uh791sIvoVPb4P3DYn0Y8tehIkc30xW, 2022-11-12 01:15:28, 2022-11-12 01:15:28))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+12/11/2022 01:16:04
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rol' in 'field list' (SQL: insert into `users` (`name`, `email`, `rol`, `password`, `updated_at`, `created_at`) values (Lisy, lis@mail.com, 1, $2y$10$t2iDzOHkQRxGOND2ePC9H.93FGbeWmMPzyWStC8M.J6YotHSngH2m, 2022-11-12 01:16:03, 2022-11-12 01:16:03))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+12/11/2022 01:16:56
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rol' in 'field list' (SQL: insert into `users` (`name`, `email`, `rol`, `password`, `updated_at`, `created_at`) values (Lisy, lis@mail.com, 1, $2y$10$Gci3B9eebjKlNX25Evqt3On24GzwIfcEXWPdxjUBPdGlyL4eysjB2, 2022-11-12 01:16:56, 2022-11-12 01:16:56))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+12/11/2022 01:25:29
+message => The email has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+12/11/2022 01:33:37
+message => The email has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+12/11/2022 02:26:32
+message => No existe el empleado
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 195
+
+12/11/2022 02:30:48
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'incomeRecord' in 'field list' (SQL: select count(`incomeRecord`) as aggregate from `employees`)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+12/11/2022 02:31:58
+message => No se puede eliminar un empleado con registros de ingreso
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 199
+
+12/11/2022 02:32:21
+message => No se puede eliminar un empleado con registros de ingresos
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 199

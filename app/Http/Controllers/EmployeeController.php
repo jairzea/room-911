@@ -23,27 +23,30 @@ class EmployeeController extends Controller
             $page = $request->get('page');
 
             $id = $request->get('id');
-            $deparment = $request->get('deparment');
+            $department = $request->get('department');
 
-            $consult = Employee::with('department')->with('incomeRecord')->paginate($page);
+            $consult = Employee::with('department')->with('incomeRecord')->get();
             
             if ($request->input('id')) {
-                $consult = Employee::with('department')->with('incomeRecord')->where('identification', $id)->paginate($page);
+                $consult = $consult->where('identification', $id);
+            }
+
+            if ($request->get('department')) {
+                $consult = $consult->where('department_id', $department);
 
             }
 
-            if ($request->get('deparment')) {
-                $consult = Employee::with('department')->with('incomeRecord')->where('department_id', $deparment)->paginate($page);
-
+            foreach ($consult as $key => $value) {
+                $val[] = $value;
             }
 
-            if(empty($consult))
+            if(empty($val) || empty($consult))
                 throw new Exception("No se encontraron registros");
 
             $employees = array(
                 "_rel"		=> "employees",
                 "_embedded" => array(
-                    "employees" => $consult
+                    "employees" => $val
                 )
             );
 
@@ -95,16 +98,6 @@ class EmployeeController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -119,7 +112,7 @@ class EmployeeController extends Controller
 
             $validated = $request->validate([
                 'name' => 'required|string',
-                'last_name' => 'required|string|unique:employees',
+                'last_name' => 'required|string',
                 'id' =>  'required|integer|exists:departments'
             ]);
 
@@ -150,9 +143,10 @@ class EmployeeController extends Controller
         try {
 
             $validated = $request->validate([
-                'id' =>  'required|integer|exists:departments'
+                'id' =>  'required|integer|exists:departments',
+                'file' => 'required|mimes:csv,txt',
             ]);
-            
+
             Excel::import(new EmployeesImport($request->id), $request->file);
 
             return response()->json(["message" => "Empleados cargados correctamente"], 200);
@@ -176,7 +170,7 @@ class EmployeeController extends Controller
             $search = Employee::find($id);
             
             if (empty($search)) {
-                throw new Exception("Ocurrio un error");
+                throw new Exception("No existe el empleado");
             }
 
             $search->update(["state" => $request->input("state")]);
@@ -186,6 +180,33 @@ class EmployeeController extends Controller
             
         } catch (Exception $e) {
             return returnExceptions($e);
+        }
+    }
+
+    public function delete($id){
+
+        try {
+
+            //Employee::with('department')->with('incomeRecord')->get()
+
+            $employe = Employee::with('incomeRecord')->find($id);
+
+            if (empty($employe)) {
+                throw new Exception("No existe el empleado");
+            }
+
+            if(count($employe->incomeRecord) > 0){
+                throw new Exception("No se puede eliminar un empleado con registros de ingresos");
+            }
+
+            $employe->delete();
+
+            return response()->json(["message" => "empleado eliminado satisfactoriamente"], 200);
+
+        } catch (Exception $e) {
+
+            return returnExceptions($e);
+
         }
     }
 }

@@ -38,6 +38,12 @@ Route::group(['prefix' => env('API_VERSION')], function ()
     Route::post('/auth/signup',[AuthController::class, 'signUp']);
     Route::post('/auth/entry_room_911',[IncomeRecordController::class, 'entryRoom911']);
 
+    // ---------------------------------------------------------------------
+    // export
+    // --------------------------------------------------------------------- 
+    Route::get('/export/sample_file',[ExportController::class, 'exportSampleFile']);
+    Route::get('/export/income_record',[IncomeRecordController::class, 'downloadIncomeRecord']);
+
     Route::group(['middleware' => 'auth:api'], function() 
     {   
         // ---------------------------------------------------------------------
@@ -59,6 +65,7 @@ Route::group(['prefix' => env('API_VERSION')], function ()
         Route::get('/employees',[EmployeeController::class, 'index']);
         Route::post('/employees/bulk_upload_users',[EmployeeController::class, 'bulkUploadUsers']);
         Route::patch('/employees/{id}',[EmployeeController::class, 'changeState']);
+        Route::delete('/employees/{id}',[EmployeeController::class, 'delete']);
 
         // ---------------------------------------------------------------------
         // departments
@@ -66,12 +73,6 @@ Route::group(['prefix' => env('API_VERSION')], function ()
         Route::post('/departments',[DepartmentController::class, 'store']);
         Route::put('/departments/{id}',[DepartmentController::class, 'update']);
         Route::get('/departments',[DepartmentController::class, 'index']);
-
-        // ---------------------------------------------------------------------
-        // export
-        // --------------------------------------------------------------------- 
-        Route::get('/export/sample_file',[ExportController::class, 'exportSampleFile']);
-        Route::get('/export/income_record',[IncomeRecordController::class, 'downloadIncomeRecord']);
 
         // ---------------------------------------------------------------------
         // income record

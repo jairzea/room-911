@@ -92,7 +92,6 @@ class IncomeRecordController extends Controller
     *     path="/api/v1/export/income_record",
     *     tags={"Exports"},
     *     summary="Exportar registro de ingresos de empleados",
-    *     security={{"bearer_token":{}}},
     *     @OA\Response(
     *         response=200,
     *         description="{Download Income Record}",
@@ -101,7 +100,7 @@ class IncomeRecordController extends Controller
     */
     public function downloadIncomeRecord()
     {
-        return Excel::download(new EmployeeIncomeRecord, 'income_record.xlsx', true);
+        return Excel::download(new EmployeeIncomeRecord, 'income_record.xlsx');
     }
 
  

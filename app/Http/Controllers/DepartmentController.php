@@ -10,10 +10,39 @@ use App\Models\Department;
 class DepartmentController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    * @OA\Get(
+    *     path="/api/v1/departments",
+    *     tags={"Departments"},
+    *     summary="Listar departamentos",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "department":{},
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function index()
     {
         try {
@@ -28,11 +57,41 @@ class DepartmentController extends Controller
 
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    * @OA\Post(
+    *     path="/api/v1/departments",
+    *     tags={"Departments"},
+    *     summary="Crear departamento",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="name", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="description", in="query", @OA\Schema(type="string")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Departamento creado con éxito",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function store(Request $request)
     {
         try {
@@ -57,12 +116,42 @@ class DepartmentController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    * @OA\Put(
+    *     path="/api/v1/departments/{id}",
+    *     tags={"Departments"},
+    *     summary="Actualizar departamento",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="name", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="description", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="id", required=true, in="path", @OA\Schema(type="string")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Departamento creado con éxito",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function update(Request $request, $id)
     {
         try {

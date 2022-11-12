@@ -56,6 +56,8 @@ Route::group(['prefix' => env('API_VERSION')], function ()
         // ---------------------------------------------------------------------
         Route::post('/roles',[RolesController::class, 'store']);
         Route::get('/roles/{id}',[RolesController::class, 'show']);
+        Route::get('/roles',[RolesController::class, 'index']);
+        Route::put('/roles/{id}',[RolesController::class, 'update']);
 
         // ---------------------------------------------------------------------
         // employees

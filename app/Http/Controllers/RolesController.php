@@ -10,10 +10,39 @@ use App\Models\Roles;
 class RolesController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    * @OA\Get(
+    *     path="/api/v1/roles",
+    *     tags={"Roles"},
+    *     summary="Listar roles",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "roles":{},
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function index()
     {
         try {
@@ -27,11 +56,41 @@ class RolesController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    * @OA\Post(
+    *     path="/api/v1/roles",
+    *     tags={"Roles"},
+    *     summary="Crear rol",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="name", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="description", in="query", @OA\Schema(type="string")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                     "message":"Rol creado con éxito",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function store(Request $request)
     {
         try {
@@ -83,12 +142,42 @@ class RolesController extends Controller
 
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    * @OA\Put(
+    *     path="/api/v1/roles/{id}",
+    *     tags={"Roles"},
+    *     summary="Crear rol",
+    *     security={{"bearer_token":{}}},
+    *     @OA\Parameter(name="name", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="description", in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="id", in="path", @OA\Schema(type="string")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                     "Rol actualizado con éxto",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public function update(Request $request, $id)
     {
         try {

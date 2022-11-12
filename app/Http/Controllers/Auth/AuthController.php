@@ -15,6 +15,7 @@ use App\Http\Controllers\RolesController;
 /**
 * @OA\Info(title="API's Room 911", version="1.0")
 *
+* @OA\Server(url="https://servicios.asstiseguridadsocial.com")
 * @OA\Server(url="http://127.0.0.1:8000")
 *
 * @OAS\SecurityScheme(
@@ -25,9 +26,42 @@ use App\Http\Controllers\RolesController;
 */
 class AuthController extends Controller
 {
-     /**
-     * Registro de usuario
-     */
+    /**
+    * @OA\Post(
+    *     path="/api/v1/auth/signup",
+    *     tags={"Auth"},
+    *     summary="Crear usuario administrador",
+    *     @OA\Parameter(name="name", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="email", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Parameter(name="password", required=true, in="query", @OA\Schema(type="string")),
+    *     @OA\Response(
+    *         response=200,
+    *         description="Success.",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Successfully created user!",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     ),
+    *     @OA\Response(
+    *         response=500,
+    *         description="Failed",
+    *         @OA\MediaType(
+    *             mediaType="application/json",
+    *             @OA\Schema(
+    *                  example={
+    *                      "message":"Mensaje de error",
+    *                 },
+    *             ),
+    * 
+    *         ),
+    *     )
+    * )
+    */
     public static function signUp(Request $request)
     {
         try {

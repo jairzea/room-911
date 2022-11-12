@@ -57,3 +57,9 @@ _Cada vez que realice una migración debera ejecutar el comando anterior_
 ## Demo de la aplicacion
 
 https://prueba.protech.net.co
+
+## Documentación de la api
+
+-   El proyecto utiliza swagger para documentar la API, en el siguiente enlace puede acceder a esta documentación para su revisión.
+
+https://servicios.asstiseguridadsocial.com/api/documentation#/

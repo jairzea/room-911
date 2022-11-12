@@ -49,3 +49,193 @@ line => 57
 message => SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect time value: '1667878002' for column 'hour' at row 1 (SQL: insert into `income_records` (`employee_identification`, `hour`, `state`, `date`, `updated_at`, `created_at`) values (12345678-1667873495, 1667878002, Empleado autorizado, 2022-11-08, 2022-11-08 03:26:42, 2022-11-08 03:26:42))
 file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
 line => 760
+
+09/11/2022 22:46:14
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:50:07
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:50:14
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:51:50
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:52:17
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:52:23
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:52:30
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:53:48
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:57:53
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:57:56
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 22:58:16
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 23:33:53
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 23:34:40
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 23:36:43
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 23:37:13
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 23:37:24
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 23:37:49
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 23:43:03
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 23:47:15
+message => The name field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+09/11/2022 23:47:21
+message => The name field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+10/11/2022 18:08:11
+message => The name field is required. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+10/11/2022 18:09:44
+message => The last name has already been taken. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+10/11/2022 18:09:57
+message => The last name has already been taken. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+10/11/2022 18:10:05
+message => The identification must be an integer.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+10/11/2022 20:26:40
+message => The last name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+10/11/2022 20:26:48
+message => The last name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+10/11/2022 21:13:21
+message => Ocurrio un error
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 166
+
+10/11/2022 21:14:36
+message => Ocurrio un error
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 166
+
+10/11/2022 21:15:12
+message => Ocurrio un error
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 166
+
+10/11/2022 23:45:05
+message => The name field is required. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 09:04:15
+message => The name field is required. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 11:41:05
+message => Method Illuminate\Database\Eloquent\Collection::with does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113
+
+11/11/2022 12:14:12
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'income_records.identification' in 'where clause' (SQL: select * from `income_records` where `income_records`.`identification` in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13))
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 760
+
+11/11/2022 14:17:33
+message => The name field is required. (and 3 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 327
+
+11/11/2022 14:44:28
+message => Undefined variable $new
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 48
+
+11/11/2022 19:04:23
+message => Undefined variable $deparment
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 34
+
+11/11/2022 19:06:44
+message => Undefined variable $id
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/app/Http/Controllers/EmployeeController.php
+line => 28
+
+11/11/2022 19:13:01
+message => Method Illuminate\Database\Eloquent\Collection::paginate does not exist.
+file => /Users/jairzeapaez/Documents/Proyectos/room-911/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php
+line => 113

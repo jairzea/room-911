@@ -22,7 +22,23 @@ class EmployeeController extends Controller
 
             $page = $request->get('page');
 
-            $consult = Employee::paginate($page);
+            $id = $request->get('id');
+            $deparment = $request->get('deparment');
+
+            $consult = Employee::with('department')->with('incomeRecord')->paginate($page);
+            
+            if ($request->input('id')) {
+                $consult = Employee::with('department')->with('incomeRecord')->where('identification', $id)->paginate($page);
+
+            }
+
+            if ($request->get('deparment')) {
+                $consult = Employee::with('department')->with('incomeRecord')->where('department_id', $deparment)->paginate($page);
+
+            }
+
+            if(empty($consult))
+                throw new Exception("No se encontraron registros");
 
             $employees = array(
                 "_rel"		=> "employees",
@@ -30,9 +46,6 @@ class EmployeeController extends Controller
                     "employees" => $consult
                 )
             );
-
-            if(empty($consult))
-                throw new Exception("No se encontraron registros");
 
             return response()->json(["response" => $employees], 200);
 
